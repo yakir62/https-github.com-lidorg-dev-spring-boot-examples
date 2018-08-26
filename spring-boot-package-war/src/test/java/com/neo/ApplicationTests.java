@@ -7,11 +7,19 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
+@WebAppConfiguration
 public class ApplicationTests {
-
+private MockMvc mvc;
+	  @Before
+    public void setUp() throws Exception {
+        mvc = MockMvcBuilders.standaloneSetup(new ApplicationTests()).build();
+	
 	@Test
 	public void contextLoads() {
-		System.out.println("This test method should be run");
+		mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcResultHandlers.print())
+                .andReturn();
 	}
 
 }
