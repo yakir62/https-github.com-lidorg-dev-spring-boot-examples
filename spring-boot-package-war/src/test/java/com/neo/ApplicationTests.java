@@ -11,7 +11,7 @@ public class ApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		assertTrue(5 > 0);
+		System.out.println("This test method should be run");
 	}
 
 }
