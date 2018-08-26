@@ -49,7 +49,7 @@
       <version>5.1.0</version>
       <scope>test</scope>
     </dependency>
-	 
+	</dependency> 
   <build>
     <plugins>
       <plugin>
