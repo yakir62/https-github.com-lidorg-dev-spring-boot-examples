@@ -16,10 +16,9 @@ private MockMvc mvc;
 	
 	@Test
 	public void contextLoads() {
-		mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andDo(MockMvcResultHandlers.print())
-                .andReturn();
+        mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("Hello World")));
 	}
 
 }
