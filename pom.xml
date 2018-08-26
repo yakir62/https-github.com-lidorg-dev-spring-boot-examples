@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.neo</groupId>
   <artifactId>spring-boot-package-war</artifactId>
-  <version>0.0.7-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>spring-boot-package-war</name>
   <description>Demo project for Spring Boot package war</description>
@@ -44,9 +44,12 @@
       <optional>true</optional>
     </dependency>
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
+     <!-- <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-      <version>5.1.0</version>
+      <version>5.1.0</version> -->
+	    <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
 	</dependency> 
